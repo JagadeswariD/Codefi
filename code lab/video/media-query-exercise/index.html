@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Doe's Portfolio</title>
+  </head>
+  <link rel="stylesheet" href="./styles.css" />
+  <body>
+    <header>
+      <h1>John Doe's Portfolio</h1>
+      <nav>
+        <ul class="desktop-nav">
+          <li><a href="">About</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="./contact">Contact</a></li>
+        </ul>
+        <select class="mobile-nav">
+          <option value="#" selected>Menu</option>
+          <option value="#">About</option>
+          <option value="#">Projects</option>
+          <option value="#">Contact</option>
+        </select>
+      </nav>
+    </header>
+    <section class="about">
+      <h2>About Me</h2>
+      <div class="about-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTpmbXbdEa-IqW0GLwqlTldAR0XWYHqMMD1URA0vU2c8rm7yqAanJxZ1uRyLy-Xqmq5vY&usqp=CAU"
+          alt=""
+        />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit,
+          eligendi! Natus consequuntur modi tempora sed quam at autem, ipsam
+          voluptatibus perferendis soluta consequatur, ipsum dolore voluptates
+          est quos sequi accusamus
+        </p>
+      </div>
+    </section>
+    <section class="projects">
+      <h2>Project Details</h2>
+      <div class="project-card">
+        <img
+          src="https://uizard.io/static/productivity_app_cover-7d1c524200bba1b647248be1a0ade601.png"
+          alt=""
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rem
+          laborum quod nihil eius necessitatibus, eaque esse officia molestias?
+          Rem alias qui laudantium deleniti quo beatae, laboriosam repudiandae
+          iusto ea.
+        </p>
+      </div>
+      <div class="project-card">
+        <img
+          src="https://www.springboard.com/blog/wp-content/uploads/2022/04/single-landing-page.png"
+          alt=""
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rem
+          laborum quod nihil eius necessitatibus, eaque esse officia molestias?
+          Rem alias qui laudantium deleniti quo beatae, laboriosam repudiandae
+          iusto ea.
+        </p>
+      </div>
+      <div class="project-card">
+        <img
+          src="https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-11-27/562ab1e0-308e-11eb-ae9f-09e7aa62c338.jpg"
+          alt=""
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rem
+          laborum quod nihil eius necessitatibus, eaque esse officia molestias?
+          Rem alias qui laudantium deleniti quo beatae, laboriosam repudiandae
+          iusto ea.
+        </p>
+      </div>
+    </section>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>You can reach me at:</p>
+      <address>
+        Email: <a href="mailto:contact@example.com">contact@example.com</a
+        ><br />
+        Phone: 123-456-7890
+      </address>
+      <h3>Contact Form</h3>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <footer>@Copyright 2023 John Doe</footer>
+  </body>
+</html>

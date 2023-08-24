@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+      .column {
+        float: left;
+      }
+      .sidebar {
+        width: 25%;
+      }
+      .main-content {
+        width: 50%;
+      }
+      .container {
+        text-align: center;
+        display: flex;
+      }
+      .container-cards {
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .cards {
+        max-width: 33%;
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        box-shadow: 0 px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      .container-cards img {
+        width: 100%;
+      }
+      @media screen and (max-width: 768px) {
+        .column,
+        .sidebar,
+        .main-content {
+          float: none;
+          width: 100%;
+        }
+        .sidebar {
+          display: none;
+        }
+        .cards {
+          max-width: calc(50% - 20px);
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .cards {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column sidebar">
+        <h2>Sidebar 1</h2>
+        <p>This is paragraph for Sidebar1</p>
+      </div>
+      <div class="column main-content">
+        <h2>Main Content</h2>
+        <p>This is main content area</p>
+      </div>
+      <div class="column sidebar">
+        <h2>Sidebar 2</h2>
+        <p>This is paragraph for Sidebar2</p>
+      </div>
+    </div>
+    <div class="container-cards">
+      <div class="cards">
+        <img
+          src="https://iso.500px.com/wp-content/uploads/2013/08/11834033-1170.jpeg"
+          alt=""
+        />
+        <h2>Card 1</h2>
+        <p>This is the content for the first card</p>
+      </div>
+      <div class="cards">
+        <img
+          src="https://www.publicdomainpictures.net/pictures/360000/nahled/blue-sky-background-with-clouds-1596445203nMi.jpg"
+          alt=""
+        />
+        <h2>Card 2</h2>
+        <p>This is the content for the second card</p>
+      </div>
+      <div class="cards">
+        <img
+          src="https://images.unsplash.com/photo-1682685797661-9e0c87f59c60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww&w=1000&q=80"
+          alt=""
+        />
+        <h2>Card 3</h2>
+        <p>This is the content for the third card</p>
+      </div>
+    </div>
+  </body>
+</html>
