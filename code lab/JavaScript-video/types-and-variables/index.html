@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Started</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //Strings
+      "This is my String";
+      "This is my second String";
+
+      //Numbers includes floats
+      10;
+      500;
+      3.14;
+
+      //Boolean (truthy and falsy)
+      true;
+      false;
+      console.log(Boolean("")); //returns false;
+      console.log(Boolean("This is a String")); //returns true;
+
+      //Specials
+      //undefined
+      let user;
+      console.log(user); //undefined
+      user = "Chris";
+      console.log(user); //Chris
+
+      undefined;
+      NaN;
+      null;
+
+      //Objects
+
+      const user2 = {
+        name: "Chris",
+        age: 45,
+      };
+      console.log(user2.name);
+
+      const users = ["A", "B", "C", "D"];
+      console.log(users[0]);
+      const usersObj = [
+        { name: "Holly", age: 31 },
+        { name: "Rolly", age: 28 },
+      ];
+      console.log(usersObj[1].name);
+      console.log(usersObj[1]["name"]);
+
+      //variable declaration
+      var a;
+      let b;
+      const c = 0; // a constant variable cannot be redeclared but a constant object can be reassigned.
+
+      const user1 = {
+        name: "Ranc",
+      };
+      console.log(user1.name);
+      user1 = {
+        name: "Holly",
+      };
+      console.log(user1.name);
+    </script>
+  </body>
+</html>

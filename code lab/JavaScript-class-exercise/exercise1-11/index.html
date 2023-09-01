@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("Hello, World!");
+      let name = "Eswari";
+      console.log(name);
+      let length = prompt("Enter length of a rectangle: ");
+      let width = prompt("Enter width of a rectangle: ");
+      console.log(`Area of the rectangle : ${length * width}`);
+      let number = prompt("Enter a number: ");
+      console.log(number % 2 === 0 ? "Even number" : "Odd number");
+      for (let i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+      const username = prompt("Enter your name: ");
+      console.log(`Welcome ${username}`);
+
+      const factNumber = prompt("Enter a number: ");
+      console.log(`Factorial of ${factNumber} is ${factorial(factNumber)}`);
+
+      function factorial(num) {
+        if (num === 0 || num === 1) {
+          return 1;
+        } else {
+          return num * factorial(num - 1);
+        }
+      }
+
+      const year = prompt("Enter a year to check for leap year:");
+      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        console.log(`${year} is a leap year.`);
+      } else {
+        console.log(`${year} is not a leap year.`);
+      }
+
+      let num = 1;
+      let total = 0;
+      while (num <= 100) {
+        total += num;
+        num++;
+      }
+      console.log("Sum of all the numbers from 1 to 100", total);
+      const num1 = prompt("Enter 1st number for arithmetic  operations:");
+      const num2 = prompt("Enter 2nd number for arithmetic  operations:");
+      arthmeticOperations(num1, num2);
+
+      function arthmeticOperations(num1, num2) {
+        console.log("Addition", num1 + num2);
+        console.log("Subtraction", num1 - num2);
+        console.log("Multiplication", num1 * num2);
+        console.log("Division", num1 > num2 ? num1 / num2 : num2 / num1);
+      }
+
+      let stringVar = "This is a String variable";
+      let numVar = 4;
+      let booleanVar = true;
+      let nullVar = null;
+      let undefinedVar;
+      const objVar = {
+        name: "John",
+        isEnrolled: true,
+      };
+
+      const arrVar = ["Orange", "Apple", "Kiwi", "Banana"];
+      console.log(nullVar === undefinedVar);
+    </script>
+  </body>
+</html>

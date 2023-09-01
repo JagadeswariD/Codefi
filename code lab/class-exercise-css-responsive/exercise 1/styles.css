@@ -1,0 +1,15 @@
+body {
+  background: #cbd8d1;
+}
+p {
+  color: #105d31;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    color: #5c71a3;
+  }
+}
