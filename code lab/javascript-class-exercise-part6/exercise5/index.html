@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Buttons DOM Exercise</title>
+  </head>
+  <body>
+    <!-- Create a new HTML file named multiple_buttons.html. In this file, include at least three buttons with the class btn_onclick. Each button can have unique text like "Button 1", "Button 2", and so on. -->
+
+    <button type="button" class="btn_onclick" data-color="blue">Button1</button>
+    <button type="button" class="btn_onclick" data-color="red">Button2</button>
+    <button type="button" class="btn_onclick" data-color="yellow">
+      Button3
+    </button>
+
+    <script>
+      /*Inside the script element, use the querySelectorAll method to select all buttons with the class btn_onclick.*/
+      const buttons = document.querySelectorAll(".btn_onclick");
+      //Use the forEach method to loop over each button in the node list.
+      //For each button, add an onclick event that will change the document's background color when the button is clicked
+      buttons.forEach((button) =>
+        button.addEventListener("click", changeBackground)
+      );
+      function changeBackground(e) {
+        const color = e.target.getAttribute("data-color");
+        document.body.style.backgroundColor = color;
+      }
+
+      /*Create a new button element with the text "Click Me".
+Append this button to the end of the body.
+Add an event listener to the button so that when it's clicked, it alerts the user with the message "Button was clicked!". Starting Code:*/
+
+      const button = document.createElement("button");
+      button.textContent = "Click Me";
+      document.body.appendChild(button);
+
+      button.addEventListener("click", function () {
+        alert("Button was clicked!");
+      });
+    </script>
+  </body>
+</html>

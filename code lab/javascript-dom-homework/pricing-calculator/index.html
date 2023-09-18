@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        padding: 30px;
+      }
+      .text-giant {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h2>How much do pies cost?</h2>
+      <form>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" name="price" class="form-control" value="30" />
+        </div>
+        <div class="form-group">
+          <label for="quantity"
+            >Quantity <span class="label label-primary qty-label"></span></label
+          ><input
+            type="range"
+            min="1"
+            max="10"
+            step="1"
+            class="form-control"
+            name="quantity"
+            value="1"
+          />
+        </div>
+      </form>
+      <div class="text-right text-giant total"></div>
+    </div>
+    <script>
+      const quantity = document.querySelector("[name=quantity]");
+      const price = document.querySelector("[name=price]");
+      const total = document.querySelector(".total");
+      const qtyLabel = document.querySelector(".qty-label");
+      function calculatePrice() {
+        qtyLabel.innerText = quantity.value;
+        total.innerText = "$" + (price.value * quantity.value).toFixed(2);
+      }
+      calculatePrice();
+      quantity.addEventListener("input", calculatePrice);
+      // quantity.addEventListener("input", updateQuantity);
+
+      price.addEventListener("input", calculatePrice);
+    </script>
+  </body>
+</html>

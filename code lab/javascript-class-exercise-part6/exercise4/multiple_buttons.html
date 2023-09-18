@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Buttons DOM Exercise</title>
+  </head>
+  <body>
+    <input type="text" id="textInput" />
+    <p id="textDisplay"></p>
+
+    <script>
+      /*For the provided input element, add an event listener to log every keypress made by the user.
+      Display the current content of the input in a separate paragraph below the input every time the user types. Starting Code:*/
+      const textInput = document.querySelector("#textInput");
+      textInput.addEventListener("input", displayContent);
+      function displayContent() {
+        const textDisplay = document.querySelector("#textDisplay");
+        textDisplay.innerText = textInput.value;
+      }
+    </script>
+  </body>
+</html>

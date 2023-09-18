@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Create a new HTML file named dom.html and include a button with the class btn and btn_inline. -->
+
+    <button type="button" class="btn btn_inline">Click Me</button>
+    <script>
+      /*Add an onclick event to this button that will call a JavaScript function named changeBackground(). */
+      const button = document.querySelector(".btn");
+      button.addEventListener("click", changeBackground);
+      function changeBackground() {
+        document.body.style.backgroundColor = "green";
+      }
+    </script>
+  </body>
+</html>

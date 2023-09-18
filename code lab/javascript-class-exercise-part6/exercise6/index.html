@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Buttons DOM Exercise</title>
+  </head>
+  <body>
+    <ul id="itemList"></ul>
+    <script>
+      const items = [
+        { name: "Item 1" },
+        { name: "Item 2" },
+        { name: "Item 3" },
+        { name: "Item 4" },
+      ];
+
+      /*Loop through the provided list of items.
+For each item, create a new li element, set its text to the item's name, and append it to the provided ul.
+Ensure that the background color of every even item is "gray". Starting Code:*/
+
+      const ul_list = document.querySelector("ul");
+
+      items.forEach((item) => {
+        const li = document.createElement("li");
+        li.innerText = item.name;
+        ul_list.append(li);
+      });
+    </script>
+  </body>
+</html>

@@ -18,7 +18,7 @@ function personalDetails() {
     `${firstName} ${lastName} is ${age} years old and lives in ${country}`
   );
 }
-  let firstName = "James",
+let firstName = "James";
 personalDetails();
 //Outside of the functon change the firstName to 'James', did you encounter a problem?
 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        padding: 30px;
+      }
+      .text-giant {
+        font-size: 40px;
+      }
+
+      .btn-crazy {
+        position: absolute;
+        top: 30px;
+        left: 40%;
+        width: 20%;
+        transition: 0.5s ease all;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn-crazy bt btn-lg btn-danger">
+      Click Me
+    </button>
+    <button type="button" class="btn-crazy bt btn-lg btn-primary">
+      Click Me
+    </button>
+    <button type="button" class="btn-crazy bt btn-lg btn-success">
+      Click Me
+    </button>
+    <button type="button" class="bttnn" data-color="green">Click Me</button>
+    <script>
+      const bttnn = document.querySelector(".bttnn");
+      function changeColor() {
+        console.log(this);
+        document.body.style.backgroundColor = "green";
+      }
+      bttnn.addEventListener("click", changeColor);
+      /* 
+      const crazyButton = document.querySelector(".btn-crazy");
+      function moveButton() {
+        const offsetLeft =
+          Math.random() * (window.innerWidth - crazyButton.clientWidth);
+        const offsetTop =
+          Math.random() * (window.innerHeight - crazyButton.clientHeight);
+
+        crazyButton.style.top = offsetTop + "px";
+        crazyButton.style.left = offsetLeft + "px";
+      }
+      crazyButton.addEventListener("mouseenter", moveButton); */
+      const crazyButtons = document.querySelectorAll(".btn-crazy");
+
+      function moveButton() {
+        const offsetLeft =
+          Math.random() * (window.innerWidth - this.clientWidth);
+        const offsetTop =
+          Math.random() * (window.innerHeight - this.clientHeight);
+
+        this.style.top = offsetTop + "px";
+        this.style.left = offsetLeft + "px";
+      }
+      crazyButtons.forEach((button) =>
+        button.addEventListener("mouseenter", moveButton)
+      );
+
+      /*  const crazyButtons = document.querySelectorAll(".btn-crazy");
+
+      function moveButton(e) {
+        const button=e.target;
+        const offsetLeft =
+          Math.random() * (window.innerWidth - button.clientWidth);
+        const offsetTop =
+          Math.random() * (window.innerHeight - button.clientHeight);
+
+        button.style.top = offsetTop + "px";
+        button.style.left = offsetLeft + "px";
+      }
+      crazyButtons.forEach((button) =>
+        button.addEventListener("mouseenter", moveButton)
+      ); */
+    </script>
+  </body>
+</html>
