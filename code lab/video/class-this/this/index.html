@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function test(names) {
+        this.names = names;
+        console.log(this);
+      }
+      test();
+      const users = {
+        username: "Eswari",
+        age: 38,
+        display: function () {
+          console.log(this);
+          console.log(this.username + " " + this.age);
+          return () => {
+            console.log(this);
+          };
+        },
+      };
+      //users.display();
+      const temp = users.display();
+      temp();
+
+      const newUser = new test("test1");
+    </script>
+  </head>
+  <body></body>
+</html>
